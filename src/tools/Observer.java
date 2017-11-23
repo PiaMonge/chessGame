@@ -1,8 +1,5 @@
 package tools;
 
-import java.util.List;
-
-import model.PieceIHM;
 
 public interface Observer {
 	

@@ -1,36 +1,43 @@
 package model;
 
-import java.util.List;
 
 public class PieceIHM {
-	List<Coord> listCoord;
-	Couleur couleur;
-	String Name;
+	private Pieces piece;
 	
 	
-	public PieceIHM(List<Coord> listCoord, Couleur couleur, String name) {
+	
+	public PieceIHM(Pieces piece) {
 		super();
-		this.listCoord = listCoord;
-		this.couleur = couleur;
-		this.Name = name;
-	}
-	public List<Coord> getListCoord() {
-		return listCoord;
-	}
-	public Couleur getCouleur() {
-		return couleur;
-	}
-	public String getName() {
-		return Name;
+		this.piece = piece;
 	}
 	
+	public Couleur getCouleur() {
+		return piece.getCouleur();
+	}
+
+
+
+	public int getX() {
+		return piece.getX();
+	}
+
+
+
+	public int getY() {
+		return piece.getY();
+	}
+
+
+
+	public String getName() {
+		return piece.getName();
+	}
+
+
+
 	@Override
 	public String toString() {
-		return "PieceIHM [listCoord=" + listCoord + ", couleur=" + couleur
-				+ ", Name=" + Name + "]";
+		return "PieceIHM [piece=" + piece + "]";
 	}
-		
-	
-	
 
 }

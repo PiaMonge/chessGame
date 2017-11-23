@@ -235,24 +235,11 @@ public class Jeu implements Game {
 	@Override
 	public List<PieceIHM> getPiecesIHM() {
 		List<PieceIHM> listPiecesIHM = new LinkedList<PieceIHM>();
-		boolean exists = false;
 		for (Pieces piece : pieces) {
-			exists = false;
-			for (PieceIHM pieceIHM : listPiecesIHM) {
-				if (pieceIHM.getName().equals(piece.getName())) {
-					exists = true;
-					pieceIHM.getListCoord().add(new Coord(piece.getX(), piece.getY()));
-					
+				if (piece.getX()!= -1 && piece.getY()!=-1) {
+					PieceIHM newPieceIHM = new PieceIHM(piece);
+					listPiecesIHM.add(newPieceIHM);
 				}
-
-			}
-			if (!exists) {
-
-				List<Coord> listCoord = new ArrayList<Coord>();
-				listCoord.add(new Coord(piece.getX(), piece.getY()));
-				PieceIHM newPieceIHM = new PieceIHM(listCoord,piece.getCouleur(), piece.getName());
-				listPiecesIHM.add(newPieceIHM);
-			}
 
 		}
 

@@ -36,7 +36,6 @@ public class ChessGameControler implements ChessGameControlers {
 
 	@Override
 	public boolean isPlayerOK(Coord initCoord) {
-		// TODO Auto-generated method stub
 		return true;
 	}
 	

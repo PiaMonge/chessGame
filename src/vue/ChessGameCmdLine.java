@@ -73,12 +73,9 @@ public class ChessGameCmdLine implements Observer {
 			Couleur color = pieceIHM.getCouleur();
 			String stColor = (Couleur.BLANC == color ? "B_" : "N_" );
 			String type = (pieceIHM.getName()).substring(0, 2);
-			
-			for(Coord coord : pieceIHM.getListCoord()) {
-				if(coord.x>=0 && coord.y >=0)
-					damier[coord.y][coord.x] = stColor + type;
-			}			
-		}
+			if(pieceIHM.getX()>=0 && pieceIHM.getY() >=0)
+					damier[pieceIHM.getY()][pieceIHM.getX()] = stColor + type;
+			}
 		
 		// Affichage du tableau formatté
 		String st = "    0     1     2     3     4     5    6     7 \n";

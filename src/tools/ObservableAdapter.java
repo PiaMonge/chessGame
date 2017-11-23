@@ -17,6 +17,7 @@ public abstract class ObservableAdapter implements Observable {
 	@Override
 	public void addObserver(Observer observer){
 		this.listObserver.add(observer);
+		//notifyObserver(observer);
 	}
 
 }
