@@ -1,43 +1,33 @@
 package model;
 
-
 public class PieceIHM {
-	private Pieces piece;
-	
+	private Pieces piece; 
 	
 	
 	public PieceIHM(Pieces piece) {
 		super();
 		this.piece = piece;
+	}	
+	
+	public int getX(){
+		return this.piece.getX();
 	}
 	
-	public Couleur getCouleur() {
-		return piece.getCouleur();
+	public int getY(){
+		return this.piece.getY();
 	}
-
-
-
-	public int getX() {
-		return piece.getX();
+	
+	public Couleur getCouleur(){
+		return this.piece.getCouleur();
 	}
-
-
-
-	public int getY() {
-		return piece.getY();
+	
+	public  String getName(){
+		return this.piece.getName();
 	}
-
-
-
-	public String getName() {
-		return piece.getName();
-	}
-
-
 
 	@Override
 	public String toString() {
 		return "PieceIHM [piece=" + piece + "]";
-	}
+	}	
 
 }

@@ -14,9 +14,9 @@ public class ChessGame extends ObservableAdapter implements BoardGames {
 	public boolean move(int xInit, int yInit, int xFinal, int yFinal) {
 		
 		boolean ret = false;
-		ret = this.isMoveOk(xInit, yInit, xFinal, yFinal);
+		ret = echiquier.isMoveOk(xInit, yInit, xFinal, yFinal);
 		if(ret)
-			ret = this.move(xInit, yInit, xFinal, yFinal);
+			ret = echiquier.move(xInit, yInit, xFinal, yFinal);
 		if(ret)
 			echiquier.switchJoueur();
 		
@@ -64,7 +64,8 @@ public class ChessGame extends ObservableAdapter implements BoardGames {
 
 	@Override
 	public boolean isMoveOk(int xInit, int yInit, int xFinal, int yFinal) {
-		return echiquier.isMoveOk(xInit, yInit, xFinal, yFinal);
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 

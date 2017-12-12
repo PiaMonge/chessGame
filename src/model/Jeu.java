@@ -73,6 +73,7 @@ public class Jeu implements Game {
 	 */
 	public boolean isMoveOk(int xInit, int yInit, int xFinal, int yFinal,
 			boolean isCatchOk, boolean isCastlingPossible) {
+		
 
 		Pieces pieceToMove = null;
 
@@ -235,20 +236,16 @@ public class Jeu implements Game {
 	@Override
 	public List<PieceIHM> getPiecesIHM() {
 		List<PieceIHM> listPiecesIHM = new LinkedList<PieceIHM>();
+		boolean exists = false;
 		for (Pieces piece : pieces) {
-				if (piece.getX()!= -1 && piece.getY()!=-1) {
-					PieceIHM newPieceIHM = new PieceIHM(piece);
-					listPiecesIHM.add(newPieceIHM);
-				}
-
+			exists = false;
+			if(piece.getX()>=0 || piece.getY()>=0)
+				listPiecesIHM.add(new PieceIHM(piece));	
 		}
 
 		return listPiecesIHM;
 	}
 
-	// public static void main(String[] args) {
-	// Jeu jeu = new Jeu(Couleur.BLANC);
-	// System.out.println(jeu);
-	// }
+
 
 }

@@ -31,7 +31,7 @@ public class ChessGameCmdLine implements Observer {
 	public void go() {  
 
 		System.out.print("\n Déplacement de 3,6 vers 3,4 = ");
-		chessGameControler.move(new Coord(3,6), new Coord(3, 4));	// true
+		chessGameControler.move(new Coord(3,6), new Coord(2, 5));	// true
 		System.out.println(chessGameControler.getMessage() + "\n");	
 		System.out.println(chessGameControler);
 		

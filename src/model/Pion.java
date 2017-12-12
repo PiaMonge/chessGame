@@ -16,8 +16,10 @@ abstract class Pion extends AbstractPiece  {
 	 * @param couleur_de_piece
 	 * @param coord
 	 */
-	public Pion(Couleur couleur_de_piece, Coord coord) {
-		super(couleur_de_piece, coord);
+	public Pion(Couleur couleur_de_piece, Coord coord, ComportementDeplacement comportementDeplacement) {
+		super(couleur_de_piece, coord,comportementDeplacement);
+		System.out.println("Constructeur Pion");
+
 		this.premierCoup = true;
 	}
 	
@@ -26,9 +28,9 @@ abstract class Pion extends AbstractPiece  {
 	/* (non-Javadoc)
 	 * @see model.AbstractPiece#isMoveOk(int, int)
 	 */
-	@Override
-	public abstract boolean isMoveOk(int xFinal, int yFinal, boolean isCatchOk,
-			boolean isCastlingPossible);
+	//@Override
+	//public abstract boolean isMoveOk(int xFinal, int yFinal, boolean isCatchOk,
+		//	boolean isCastlingPossible);
 
 
 
